@@ -11,3 +11,5 @@ function sum_mix(array $a) : int {
 }
 
 echo sum_mix([9, '7', '8', 1]);
+
+?>

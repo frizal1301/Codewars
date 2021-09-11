@@ -1,14 +1,14 @@
 <?php
 
 function reverseWords($s) {
-    $str = "";
-
-    for($i = strlen($s) - 1; $i >= 0; $i-- ) {
-        $str = $str . $s[$i];
+    $str = explode(" ", $s);
+    $data = [];
+    for($i = 0; $i < sizeof($str); $i++) {
+        $data[] = strrev($str[$i]);
     }
-    
-    return $str; // reverse those words
+    $str = implode(" ", $data);
+    return $str;
 }
 
-echo reverseWords("hello world!"); // laziR
+echo reverseWords("hello world"); // laziR
 
